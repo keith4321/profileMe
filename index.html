@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Pribadi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.google.com/specimen/playfair+display');
+        
+        body {
+            font-family: 'Playfair Display',serif;
+            font-family: 'Lato' , sans-serif;
+            background-color: #011761;
+        }
+        
+        .profile-card {
+            transition: transform 0.3s ease;
+        }
+        
+        .profile-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .social-icon:hover {
+            transform: scale(1.1);
+        }
+        
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+    <div class="container mx-auto px-4 py-12">
+        <!-- Navigation -->
+        <nav class="flex justify-between items-center mb-12">
+            <div class="text-2xl font-bold text-indigo-600">MyProfile</div>
+            <div class="flex space-x-6">
+                <a href="#home" class="text-gray-700 hover:text-indigo-600 transition">Home</a>
+                <a href="#about" class="text-gray-700 hover:text-indigo-600 transition">About</a>
+                <a href="#contact" class="text-gray-700 hover:text-indigo-600 transition">Contact</a>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section id="home" class="flex flex-col md:flex-row items-center justify-between mb-20">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Halo   Saya <span class="text-indigo-600">Keith Pejoh</span></h1>
+                <p class="text-lg text-gray-600 mb-6">Mahasiswa Teknik Elektro | Developer </p>
+                <div class="flex space-x-4">
+                    <a href="#contact" class="bg-indigo-600 text-white px-6 py-2 rounded-lg hover:bg-indigo-700 transition">Hubungi Saya</a>
+                    <a href="#about" class="border border-indigo-600 text-indigo-600 px-6 py-2 rounded-lg hover:bg-indigo-50 transition">Tentang Saya</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center animate-float">
+                <div class="w-64 h-64 md:w-80 md:h-80 bg-indigo-100 rounded-full overflow-hidden border-4 border-white shadow-xl">
+                    <img src="WhatsApp Image 2025-06-11 at 17.16.09.jpeg"
+                         alt="Profile Photo" class="cover">
+                </div>
+            </div>
+        </section>
+
+        <!-- Profile Card Section -->
+        <section id="about" class="mb-20">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Profil Saya</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Basic Info Card -->
+                <div class="profile-card bg-white rounded-xl shadow-lg p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="p-3 rounded-full bg-indigo-100 text-indigo-600 mr-4">
+                            <i class="fas fa-user text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">Informasi Dasar</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <p class="text-sm text-gray-500">Nama Lengkap</p>
+                            <p class="text-lg font-medium">Keith Pejoh</p>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-500">Nomor Induk Mahasiswa</p>
+                            <p class="text-lg font-medium">20267490</p>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-500">Tanggal Lahir</p>
+                            <p class="text-lg font-medium">17 Agustus 2005</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Address Card -->
+                <div class="profile-card bg-white rounded-xl shadow-lg p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="p-3 rounded-full bg-indigo-100 text-indigo-600 mr-4">
+                            <i class="fas fa-map-marker-alt text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">Alamat</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <p class="text-sm text-gray-500">Tempat Tinggal</p>
+                            <p class="text-lg font-medium">Tondano</p>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-500">Alamat Lengkap</p>
+                            <p class="text-lg font-medium">Jl. elang dua , Malalayang 1 Timur</p>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-500">Kode Pos</p>
+                            <p class="text-lg font-medium">95115</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section class="mb-20">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Pendidikan</h2>
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-200">
+                    <div class="p-6 text-center">
+                        <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-graduation-cap text-indigo-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Universitas Pembagunan Indonesia Manado (unpi) </h3>
+                        <p class="text-gray-600 mb-1">Sarjana Teknik Elektro</p>
+                        <p class="text-gray-500 text-sm">2023 - Sekarang</p>
+                    </div>
+                    <div class="p-6 text-center">
+                        <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-school text-indigo-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">SMA Aquino Manado</h3>
+                        <p class="text-gray-600 mb-1">IPA</p>
+                        <p class="text-gray-500 text-sm">2020 - 2023</p>
+                    </div>
+                    <div class="p-6 text-center">
+                        <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-book text-indigo-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">SMP St, Theresia Manado</h3>
+                        <p class="text-gray-600 mb-1">Sekolah Menengah Pertama</p>
+                        <p class="text-gray-500 text-sm">2017 - 2020</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="mb-20">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Hubungi Saya</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <h3 class="text-xl font-semibold mb-4">Informasi Kontak</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <div class="p-3 rounded-full bg-indigo-100 text-indigo-600 mr-4">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500">Email</p>
+                                <p class="font-medium">keithcharmikhael@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="p-3 rounded-full bg-indigo-100 text-indigo-600 mr-4">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500">Telepon</p>
+                                <p class="font-medium">+62 823 3345 5678</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="p-3 rounded-full bg-indigo-100 text-indigo-600 mr-4">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500">Alamat</p>
+                                <p class="font-medium">Jl. elang dua , Malalayang 1 Timur</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-6">
+                        <h4 class="font-medium mb-3">Media Sosial</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="social-icon w-10 h-10 flex items-center justify-center bg-blue-100 text-blue-600 rounded-full hover:bg-blue-200 transition">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="social-icon w-10 h-10 flex items-center justify-center bg-blue-100 text-blue-400 rounded-full hover:bg-blue-200 transition">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-icon w-10 h-10 flex items-center justify-center bg-pink-100 text-pink-600 rounded-full hover:bg-pink-200 transition">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="social-icon w-10 h-10 flex items-center justify-center bg-blue-100 text-blue-600 rounded-full hover:bg-blue-200 transition">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <h3 class="text-xl font-semibold mb-4">Kirim Pesan</h3>
+                    <form class="space-y-4">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Nama Anda</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Anda</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Pesan</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-indigo-600 text-white py-2 rounded-lg hover:bg-indigo-700 transition">Kirim Pesan</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center py-6 border-t border-gray-200">
+            <div class="flex justify-center space-x-6 mb-4">
+                <a href="#" class="text-gray-500 hover:text-indigo-600 transition"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-gray-500 hover:text-indigo-600 transition"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-gray-500 hover:text-indigo-600 transition"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-gray-500 hover:text-indigo-600 transition"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <p class="text-gray-600">&copy; 2023 Profil Keith Pejoh. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Animation for section when scrolled into view
+        const sections = document.querySelectorAll('section');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fadeIn');
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        sections.forEach(section => {
+            section.classList.add('opacity-0', 'transition-all', 'duration-500', 'ease-in-out');
+            observer.observe(section);
+        });
+        
+        // Dynamically apply the fade-in class
+        document.head.insertAdjacentHTML('beforeend', `
+            <style>
+                .animate-fadeIn {
+                    opacity: 1 !important;
+                    transform: translateY(0) !important;
+                }
+                section {
+                    transform: translateY(20px);
+                }
+            </style>
+        `);
+    </script>
+</body>
+</html>
